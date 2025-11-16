@@ -3481,7 +3481,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R2"
-			(at -2.25 0.25 270)
+			(at 0 1.5 0)
 			(layer "F.SilkS")
 			(uuid "3dd0b282-a5a8-41c0-81ac-c61159e43daa")
 			(effects
@@ -4795,7 +4795,7 @@
 		(descr "Through hole IDC box header, 2x03, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0")
 		(tags "Through hole vertical IDC box header THT 2x03 2.54mm double row")
 		(property "Reference" "J1"
-			(at -1.96 11.58 0)
+			(at 7.24 10.05 0)
 			(layer "F.SilkS")
 			(uuid "b4dd98a9-947d-43f0-b808-7c7c94d842ec")
 			(effects
@@ -6152,7 +6152,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C7"
-			(at 2.475 -1 270)
+			(at 0.725 -1.45 270)
 			(layer "F.SilkS")
 			(uuid "1592052f-653a-4300-a316-0ca45c48fcd2")
 			(effects
@@ -6659,6 +6659,138 @@
 			)
 		)
 	)
+	(gr_curve
+		(pts
+			(xy 63.75 33.9) (xy 60.75 34.15) (xy 57.75 33.9) (xy 57.75 33.9)
+		)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0f860fbe-c9ba-4f7e-bb59-5b0ab7b80a99")
+	)
+	(gr_curve
+		(pts
+			(xy 57.75 30.65) (xy 57.5 32.4) (xy 57.75 33.9) (xy 57.75 33.9)
+		)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "178cf524-811d-4e35-9169-24c2ff59ca09")
+	)
+	(gr_poly
+		(pts
+			(xy 57.5 30.4) (xy 57.7 30.65) (xy 57.6 32.15) (xy 57.7 33.9) (xy 57.5 34.15)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "282fc603-cdc7-47d7-a0f6-ca545f7e8c87")
+	)
+	(gr_line
+		(start 64 34.15)
+		(end 64 30.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "37868507-0fcc-4d7e-9ae3-11e2b7e8caa1")
+	)
+	(gr_curve
+		(pts
+			(xy 63.75 30.65) (xy 64 32.4) (xy 63.75 33.9) (xy 63.75 33.9)
+		)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "46855b09-6574-48ef-a36e-d825670b4b66")
+	)
+	(gr_line
+		(start 64 34.15)
+		(end 57.5 34.15)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "487c8165-db15-4585-baf3-b8488961e0d6")
+	)
+	(gr_poly
+		(pts
+			(xy 57.5 34.15) (xy 64 34.15) (xy 63.75 33.95) (xy 60.75 34.05) (xy 57.75 33.95)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "62afe46e-87cd-4490-b0a3-0ecdddc3e158")
+	)
+	(gr_poly
+		(pts
+			(xy 64 30.4) (xy 63.8 30.65) (xy 63.95 32.325) (xy 63.8 33.9) (xy 64 34.15)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "71e9cfd6-3285-4eb7-a2a8-c26abff5eab1")
+	)
+	(gr_line
+		(start 64 30.4)
+		(end 57.5 30.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "a2decb8b-f2df-4acb-903f-bf5922a65482")
+	)
+	(gr_line
+		(start 57.5 30.4)
+		(end 57.5 34.15)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "c2a7c702-ff27-4d0a-9615-70786fb066e0")
+	)
+	(gr_curve
+		(pts
+			(xy 57.75 30.65) (xy 61 30.4) (xy 63.75 30.65) (xy 63.75 30.65)
+		)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "dcd91aa0-8347-4aac-8a76-b5e8d9eb95e3")
+	)
+	(gr_poly
+		(pts
+			(xy 57.5 30.4) (xy 64 30.4) (xy 63.8 30.6) (xy 60.75 30.45) (xy 57.75 30.6)
+		)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "e9114ec1-fb1f-4d1d-ae7a-f8257fc1ca3f")
+	)
 	(gr_arc
 		(start 82.25 57.25)
 		(mid 82.176777 57.426777)
@@ -6742,6 +6874,107 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "bedb938b-d098-4373-8064-4787f99b4e5c")
+	)
+	(gr_text "SR-CRT"
+		(at 57.65 32.9 0)
+		(layer "F.SilkS")
+		(uuid "5cd21a82-3225-4346-b71a-e61e8c776d9d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Copyright © 2025 SRB Computer Co."
+		(at 44.15 48.75 0)
+		(layer "F.SilkS")
+		(uuid "e089bff7-913a-4551-af1f-6671c77e181e")
+		(effects
+			(font
+				(size 0.65 0.65)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "4a374e77-1533-4e9d-a6db-e48d284638aa")
+		(pts
+			(xy 79.7322 24.25) (xy 79.75 57.5)
+		)
+		(height 8.5178)
+		(orientation 1)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "33.25"
+			(at 87.1 40.875 90)
+			(layer "User.1")
+			(uuid "4a374e77-1533-4e9d-a6db-e48d284638aa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "a05bf6fc-d56e-46dc-8f58-cd0218deb831")
+		(pts
+			(xy 43.75 27) (xy 82.25 27)
+		)
+		(height -9.5)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "38.5"
+			(at 63 16.35 0)
+			(layer "User.1")
+			(uuid "a05bf6fc-d56e-46dc-8f58-cd0218deb831")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 	)
 	(via
 		(at 50.5 44.5)
