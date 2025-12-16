@@ -1,0 +1,29 @@
+{
+ "Device" : "GW1NR-9C",
+ "Files" : [
+  {
+   "Path" : "C:/Users/stanr/Documents/SR-CRT/FPGA/Controller/amstrad_gt65_crt_controller.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/stanr/Documents/SR-CRT/FPGA/test.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/stanr/Documents/SR-CRT/FPGA/CRT_Test/src/gowin_osc/gowin_osc.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/stanr/Documents/SR-CRT/FPGA/CRT_Test/src/gowin_dpb/crt_frame_buffer_dpbsram.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/CRT_Test/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}

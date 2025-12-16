@@ -1,0 +1,29 @@
+Reading netlist file: "C:\Users\stanr\Documents\SR-CRT\FPGA\CRT_Test\impl\gwsynthesis\CRT_Test.vg"
+Parsing netlist file "C:\Users\stanr\Documents\SR-CRT\FPGA\CRT_Test\impl\gwsynthesis\CRT_Test.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\stanr\Documents\SR-CRT\FPGA\CRT_Test\src\CRT_Test.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\Users\stanr\Documents\SR-CRT\FPGA\CRT_Test\impl\pnr\CRT_Test.power.html" completed
+Generate file "C:\Users\stanr\Documents\SR-CRT\FPGA\CRT_Test\impl\pnr\CRT_Test.pin.html" completed
+Generate file "C:\Users\stanr\Documents\SR-CRT\FPGA\CRT_Test\impl\pnr\CRT_Test.rpt.html" completed
+Generate file "C:\Users\stanr\Documents\SR-CRT\FPGA\CRT_Test\impl\pnr\CRT_Test.rpt.txt" completed
+Generate file "C:\Users\stanr\Documents\SR-CRT\FPGA\CRT_Test\impl\pnr\CRT_Test.tr.html" completed
+Mon Dec 15 19:43:51 2025
+

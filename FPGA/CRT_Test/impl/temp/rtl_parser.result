@@ -1,0 +1,36 @@
+[
+ {
+  "InstFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/test.sv",
+  "InstLine" : 1,
+  "InstName" : "CRT_Test",
+  "ModuleFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/test.sv",
+  "ModuleLine" : 1,
+  "ModuleName" : "CRT_Test",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/test.sv",
+    "InstLine" : 16,
+    "InstName" : "crt0",
+    "ModuleFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/Controller/amstrad_gt65_crt_controller.sv",
+    "ModuleLine" : 10,
+    "ModuleName" : "AMSTRAD_GT65_CRT_Controller"
+   },
+   {
+    "InstFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/test.sv",
+    "InstLine" : 25,
+    "InstName" : "internal_clk0",
+    "ModuleFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/CRT_Test/src/gowin_osc/gowin_osc.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_OSC"
+   },
+   {
+    "InstFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/test.sv",
+    "InstLine" : 41,
+    "InstName" : "f_buf0",
+    "ModuleFile" : "C:/Users/stanr/Documents/SR-CRT/FPGA/CRT_Test/src/gowin_dpb/crt_frame_buffer_dpbsram.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "CRT_FRAME_BUFFER_DPBSRAM"
+   }
+  ]
+ }
+]

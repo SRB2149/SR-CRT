@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="CRT_Test" Lut="1" T_Register="52(0)" T_Lut="148(1)" T_Bsram="5(0)">
+ <SubModule name="crt0" Register="51" Lut="139" T_Register="51(51)" T_Lut="139(139)"/>
+ <SubModule name="internal_clk0"/>
+ <SubModule name="f_buf0" Register="1" Lut="8" Bsram="5" T_Register="1(1)" T_Lut="8(8)" T_Bsram="5(5)"/>
+</Module>
