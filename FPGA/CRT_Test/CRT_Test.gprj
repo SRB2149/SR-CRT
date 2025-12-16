@@ -1,0 +1,14 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="src/gowin_dpb/crt_frame_buffer_dpbsram.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_osc/gowin_osc.v" type="file.verilog" enable="1"/>
+        <File path="C:/Users/stanr/Documents/SR-CRT/FPGA/Controller/amstrad_gt65_crt_controller.sv" type="file.verilog" enable="1"/>
+        <File path="C:/Users/stanr/Documents/SR-CRT/FPGA/test.sv" type="file.verilog" enable="1"/>
+        <File path="src/CRT_Test.cst" type="file.cst" enable="1"/>
+    </FileList>
+</Project>
