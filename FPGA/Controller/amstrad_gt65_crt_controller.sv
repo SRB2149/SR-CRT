@@ -7,13 +7,21 @@
 // HORZ_MAX may need tuning to the specific CRT and FPGA combo due to varying clock frequencies
 // and ageing CRT components
 
+// Required pixel layout:
+// Pixels read from top left to bottom right and stored one after the other (for 100% packing efficiency)
+// To read/write specific pixel:     pixel_index = y * xMax + x
+// Word address:                     word_addr   = pixel_index >> 3     (Divide by 8)
+// Bit Index:                        bit_index   = pixel_index & 0b111 (select last 3 bits)
+// Within each byte the LSB is the start.
+
 module AMSTRAD_GT65_CRT_Controller(
     input   logic [7:0]     pixel_buffer_word,  //Word from frame buffer at current index
     input   logic           clk,                //Positive edge clk (expects around 62.5MHz)
     input   logic           reset,              //Positive edge reset
     output  logic [13:0]    pixel_word_index,   //Frame buffer word index
     output  logic           pixel,              //Pixel data out
-    output  logic           sync                //SYNC signal (active low)
+    output  logic           sync,               //SYNC signal (active low)
+    output  logic           page_switch         //Page Switch signal (active high for 1 cycle)
     );
     
     enum {
@@ -64,9 +72,13 @@ module AMSTRAD_GT65_CRT_Controller(
             pixel_word_index <= '0;
             pixel_index_bit_counter <= '0;
             current_pixel <= '0;
+            
+            page_switch <= '0;
         end
         else
         begin
+            page_switch <= '0;
+        
             unique case(vertical_state_e)
                 PRE_EQUAL : begin
                     if (vertical_counter == 10'd5)
@@ -175,6 +187,7 @@ module AMSTRAD_GT65_CRT_Controller(
                     if (vertical_counter == 10'd623 && horizontal_counter == HORZ_MAX)
                     begin
                         vertical_state_e <= PRE_EQUAL;
+                        page_switch <= '1;
                     end
                 end
             endcase
