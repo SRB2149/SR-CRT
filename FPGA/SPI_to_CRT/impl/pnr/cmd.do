@@ -1,0 +1,14 @@
+-d C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\gwsynthesis\SPI_to_CRT.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\src\SPI_to_CRT.cst
+-cfg C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-correct_hold 1
+-route_maxfan 23
+-global_freq 62.500

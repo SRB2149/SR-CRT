@@ -1,0 +1,31 @@
+Reading netlist file: "C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\gwsynthesis\SPI_to_CRT.vg"
+Parsing netlist file "C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\gwsynthesis\SPI_to_CRT.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\src\SPI_to_CRT.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+WARN  (TA1132) :  'sck' was determined to be a clock but was not created.
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'sck_d' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\pnr\SPI_to_CRT.power.html" completed
+Generate file "C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\pnr\SPI_to_CRT.pin.html" completed
+Generate file "C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\pnr\SPI_to_CRT.rpt.html" completed
+Generate file "C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\pnr\SPI_to_CRT.rpt.txt" completed
+Generate file "C:\Users\stanr\Documents\SRB-CC\SR-CRT\FPGA\SPI_to_CRT\impl\pnr\SPI_to_CRT.tr.html" completed
+Sun May 10 23:55:34 2026
+

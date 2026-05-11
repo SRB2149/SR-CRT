@@ -1,0 +1,44 @@
+[
+ {
+  "InstFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT.sv",
+  "InstLine" : 6,
+  "InstName" : "SPI_to_CRT",
+  "ModuleFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT.sv",
+  "ModuleLine" : 6,
+  "ModuleName" : "SPI_to_CRT",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT.sv",
+    "InstLine" : 37,
+    "InstName" : "crt0",
+    "ModuleFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/Controller/amstrad_gt65_crt_controller.sv",
+    "ModuleLine" : 17,
+    "ModuleName" : "AMSTRAD_GT65_CRT_Controller"
+   },
+   {
+    "InstFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT.sv",
+    "InstLine" : 47,
+    "InstName" : "internal_clk0",
+    "ModuleFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT/src/gowin_osc/gowin_osc.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_OSC"
+   },
+   {
+    "InstFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT.sv",
+    "InstLine" : 66,
+    "InstName" : "f_buf0",
+    "ModuleFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT/src/gowin_dpb/gowin_dpb.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "DPBSRAM"
+   },
+   {
+    "InstFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT.sv",
+    "InstLine" : 87,
+    "InstName" : "spi_slave0",
+    "ModuleFile" : "C:/Users/stanr/Documents/SRB-CC/SR-CRT/FPGA/SPI_to_CRT.sv",
+    "ModuleLine" : 185,
+    "ModuleName" : "SPI_Slave"
+   }
+  ]
+ }
+]
