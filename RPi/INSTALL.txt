@@ -1,0 +1,97 @@
+CRT HDMI Bridge - Raspberry Pi Setup Guide
+==========================================
+
+To preface:
+The C code in this folder was written by Claude (Anthropic), not by me. 
+Similarly this guide was written by Claude too, however I have read it myself
+to check everything seems OK.
+If you have any issues feel free to email contact@stanleybooth.uk
+
+What you need
+-------------
+- Raspberry Pi Zero 2 W (other Pis should work but only the Zero 2 W is tested)
+- A good 5V power supply (the official Pi PSU is fine; cheap phone chargers
+  often aren't)
+- A microSD card, 8GB or larger, ideally a name-brand A1-rated one
+- A UVC-compliant HDMI capture card (anything that exposes YUYV at 640x480 over
+  V4L2 will work; MS2130-based cards are cheap and good)
+- The FPGA board with the matching SPI-to-CRT firmware
+
+Operating system
+----------------
+Install Raspberry Pi OS Lite (64-bit) using Raspberry Pi Imager. In the
+Imager's advanced options (gear icon), set:
+  - hostname (something memorable like 'crtpi')
+  - username and password
+  - WiFi credentials (the Zero 2 W is 2.4 GHz only)
+  - WiFi country (set this correctly or WiFi may refuse to associate)
+  - enable SSH, ideally with public-key auth
+
+Flash the card, put it in the Pi, power it on, and wait about 2 minutes for
+first-boot to complete. Then SSH in from your laptop:
+
+  ssh user@crtpi.local
+
+Setup script
+------------
+Copy the project files to the Pi:
+
+  scp setup_pi.sh build.sh v4l2_to_spi_atkinson.c user@crtpi.local:~/
+
+SSH in and run the setup script:
+
+  ssh user@crtpi.local
+  chmod +x setup_pi.sh build.sh
+  ./setup_pi.sh
+
+This will install packages, enable SPI, set the spidev buffer size, configure
+groups, build the binary, install the systemd service, and enable the
+read-only root overlay. Reboot when it tells you to.
+
+After reboot the program will start automatically and keep running. Power the
+Pi by yanking the cable whenever you like - the SD card is mounted read-only
+so it won't get corrupted.
+
+Choosing the dither algorithm
+-----------------------------
+Two C files are provided:
+  - v4l2_to_spi.c             - Bayer 8x8 ordered dither (cheap, fast)
+  - v4l2_to_spi_atkinson.c    - Atkinson error-diffusion dither (much nicer)
+
+The Atkinson dither looks significantly better in my opinion - it preserves
+text and edges far better than Bayer and is what the setup script uses by
+default. If you'd rather use Bayer, edit build.sh to point at v4l2_to_spi.c
+instead.
+
+Useful commands
+---------------
+After install:
+
+  sudo systemctl status v4l2-to-spi      # check the program is running
+  journalctl -u v4l2-to-spi -f           # watch the output (fps etc.)
+  sudo systemctl restart v4l2-to-spi     # restart after changes
+  sudo systemctl stop v4l2-to-spi        # stop temporarily
+
+To edit the program you'll need to disable the read-only overlay first:
+
+  sudo raspi-config
+  # Performance Options -> Overlay FS -> No
+  # Reboot
+
+Then edit, rebuild with ./build.sh, restart the service, and re-enable
+overlay when you're done.
+
+Troubleshooting
+---------------
+"Can't connect to capture card" - run v4l2-ctl --list-devices to confirm
+it's plugged in and the kernel sees it.
+
+"SPI errors" - check /sys/module/spidev/parameters/bufsiz is 65536. If not,
+the setup script's cmdline.txt edit didn't take effect.
+
+"No image on CRT" - probe MOSI, SCLK, and CS with a logic analyzer. You
+should see ~1.5 ms bursts at 60 Hz with CS held low for the duration.
+
+"Under-voltage warnings" - get a better power supply. Check with:
+  vcgencmd get_throttled
+A return value of 0x0 means everything is fine.
