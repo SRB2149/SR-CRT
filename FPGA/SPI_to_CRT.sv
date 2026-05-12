@@ -122,13 +122,13 @@ module SPI_to_CRT (
     begin
         if (reset)
         begin
-            recvd_data_counter <= 14'b11_1111_1111_1111;
+            recvd_data_counter <= '0;
         end
         else
         begin
             if (recvd_data_counter == 14'd9471 || locked_n_cs)
             begin
-                recvd_data_counter <= 14'b11_1111_1111_1111;
+                recvd_data_counter <= '0;
             end
             else if (data_recvd)
             begin
