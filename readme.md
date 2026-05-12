@@ -28,6 +28,10 @@ In theory the CRT could be directly driven using a level shifter from the FPGA, 
 
 In Windows 11 itself the monitor is set to 640x480 at 60 Hz.
 
+The custom interface PCB once assembled
+![Photo of the interface PCB.](Pictures/pcb.jpg)
+
+Here is the CRT showing the languages section of this repo!
 ![Photo of the CRT displaying the languages section of this repository.](Pictures/repo.jpg)
 
 ## Setup
