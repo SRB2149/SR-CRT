@@ -36,14 +36,14 @@ Here is the CRT showing the languages section of this repo!
 
 ## Setup
 
-For the Raspberry Pi side, see [RPi/INSTALL.txt](pi/INSTALL.txt). The short version:
+For the Raspberry Pi side, see [INSTALL.txt](RPi/INSTALL.txt). The short version:
 
 1. Flash Raspberry Pi OS Lite (64-bit) with WiFi and SSH preconfigured
 2. `scp` the contents of `RPi/` to the Pi
 3. Run `./setup_pi.sh` and reboot
 
 For the FPGA side, open the project in your toolchain of choice and flash to your board. Pin assignments are in the top-level constraints file.
-You can flash the [FPGA/SPI_to_CRT/impl/pnr/SPI_to_CRT.fs](SPI_to_CRT.fs) binary file directly if you have a GW1NR-LV9C (Tang Nano 9K) FPGA. Otherwise you will need to resynthesise etc.
+You can flash the [SPI_to_CRT.fs](FPGA/SPI_to_CRT/impl/pnr/SPI_to_CRT.fs) binary file directly if you have a GW1NR-LV9C (Tang Nano 9K) FPGA. Otherwise you will need to resynthesise etc.
 
 ## Acknowledgements
 
